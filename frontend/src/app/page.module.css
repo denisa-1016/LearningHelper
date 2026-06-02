@@ -1,0 +1,765 @@
+.dashboardContainer,
+.authContainer {
+  --primary-base-color: #6366f1;
+  --primary-dark-color: #4f46e5;
+  --primary-darker-color: #312e81;
+
+  --secondary-ai-base-color: #8b5cf6;
+
+  --bg-color: #f1f5f9;
+  --card-bg-color: #ffffff;
+  --text-color-body: #334155;
+  --text-color-heading: #1e293b;
+  --text-color-accent: #818cf8;
+
+  --border-radius-base: 1rem;
+
+  --shadow-base: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-hover: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-modal: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+
+  --transition-base: 0.2s ease-in-out;
+}
+
+.dashboardContainer {
+  min-height: 100vh;
+  background-color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 100%;
+  padding: 1rem 2.5rem;
+  background-color: var(--card-bg-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  box-sizing: border-box;
+}
+
+.logo {
+  margin: 0;
+  color: var(--primary-dark-color);
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.buttonLogout {
+  padding: 0.6rem 1.5rem;
+  background-color: transparent;
+  border: 2px solid var(--text-color-accent);
+  color: var(--primary-dark-color);
+  border-radius: 0.75rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: var(--transition-base);
+}
+
+.buttonLogout:hover {
+  background-color: #eef2ff;
+  border-color: var(--primary-base-color);
+}
+
+.dashboardContent {
+  max-width: 960px;
+  width: 100%;
+  padding: 0 1.5rem;
+  padding-bottom: 4rem;
+}
+
+.statusBarContainer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.statusBarText {
+  display: inline-block;
+  background-color: #e0e7ff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  /* Pill shape */
+  color: #4338ca;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  border: 1px solid #c7d2fe;
+}
+
+.uploadCard,
+.summaryCard,
+.authCard,
+.quizCard,
+.modalCard {
+  background-color: var(--card-bg-color);
+  padding: 3rem;
+  border-radius: var(--border-radius-base);
+  box-shadow: var(--shadow-base);
+  margin-bottom: 3rem;
+  border: 1px solid rgba(99, 102, 241, 0.05);
+}
+
+.uploadCard {
+  text-align: center;
+}
+
+.uploadInputsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 1.5rem 0 2rem 0;
+  flex-wrap: wrap;
+}
+
+.uploadInputBox {
+  padding: 1.5rem;
+  border: 2px dashed var(--text-color-accent);
+  border-radius: 1rem;
+  flex: 1;
+  min-width: 280px;
+  background-color: #f8fafc;
+  transition: var(--transition-base);
+}
+
+.uploadInputBox:hover {
+  border-color: var(--primary-base-color);
+  background-color: #eef2ff;
+}
+
+.uploadInputHeading {
+  margin: 0 0 1rem 0;
+  font-weight: bold;
+  color: var(--primary-dark-color);
+}
+
+.uploadFileField {
+  color: #64748b;
+  font-size: 0.9375rem;
+}
+
+.uploadSeparator {
+  font-weight: 800;
+  color: #cbd5e1;
+  font-size: 1.125rem;
+}
+
+.cameraInputBox {
+  border-color: #a78bfa;
+}
+
+.cameraInputHeading {
+  color: #7c3aed;
+}
+
+.buttonCamera {
+  padding: 0.75rem 1.75rem;
+  cursor: pointer;
+  background-color: var(--secondary-ai-base-color);
+  color: #fff;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: bold;
+  transition: var(--transition-base);
+}
+
+.buttonCamera:hover {
+  background-color: #7c3aed;
+  box-shadow: var(--shadow-hover);
+}
+
+.cameraPreviewContainer {
+  margin: 1.5rem auto;
+  text-align: center;
+  max-width: 550px;
+  background-color: #f1f5f9;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+}
+
+.cameraPreview {
+  border: 2px solid #cbd5e1;
+  border-radius: 0.75rem;
+}
+
+.cameraActionsContainer {
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.scannedImageContainer {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.scannedImage {
+  max-width: 320px;
+  border: 4px solid var(--text-color-accent);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-base);
+}
+
+.headingPrimary {
+  color: var(--primary-darker-color);
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+}
+
+.headingAccent {
+  color: var(--primary-base-color);
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+
+.inputField {
+  padding: 0.85rem 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid #c7d2fe;
+  font-size: 1rem;
+  background-color: #f8fafc;
+  color: #1e293b;
+  color-scheme: light;
+  transition: var(--transition-base);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.inputField:focus {
+  border-color: var(--primary-base-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.inputField:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #f8fafc inset !important;
+  -webkit-text-fill-color: #1e293b !important;
+}
+
+.buttonPrimary,
+.buttonPrimaryAlt,
+.buttonSubtle {
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: var(--transition-base);
+  box-sizing: border-box;
+}
+
+.buttonPrimary {
+  padding: 0.85rem 1.25rem;
+  background-color: var(--primary-dark-color);
+  color: white;
+  font-size: 1rem;
+}
+
+.buttonPrimaryAlt {
+  background-color: var(--primary-base-color);
+}
+
+.buttonPrimary:hover,
+.buttonPrimaryAlt:hover {
+  background-color: var(--primary-darker-color);
+  box-shadow: var(--shadow-hover);
+}
+
+.buttonPrimaryLarge {
+  padding: 1.25rem 2.5rem;
+  font-size: 1.125rem;
+  width: 100%;
+  border: none;
+  border-radius: 1rem;
+  font-weight: 900;
+  transition: var(--transition-base);
+  box-sizing: border-box;
+  display: block;
+  margin-top: 2rem;
+}
+
+.buttonSubtle {
+  padding: 0.75rem 1.75rem;
+  background-color: #cbd5e1;
+  color: #475569;
+}
+
+.buttonSubtle:hover {
+  background-color: #94a3b8;
+}
+
+.buttonDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #cbd5e1;
+  color: #64748b;
+  box-shadow: none !important;
+}
+
+.buttonEnabled {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.buttonEnabled:hover {
+  box-shadow: 0 8px 16px rgba(79, 70, 229, 0.25);
+}
+
+.authContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #eef2ff;
+}
+
+.authCard {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  margin-bottom: 0;
+  box-shadow: var(--shadow-modal);
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.authSwitchPrompt {
+  margin-top: 2rem;
+  color: #64748b;
+}
+
+.authSwitchLink {
+  color: var(--primary-dark-color);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.authSwitchLink:hover {
+  text-decoration: underline;
+}
+
+.messageBox {
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+  background-color: #e0e7ff;
+  color: #4338ca;
+  border-radius: 0.75rem;
+  text-align: center;
+  font-weight: 500;
+  border: 1px solid #c7d2fe;
+}
+
+.summaryHeading {
+  border-bottom: 3px solid var(--primary-base-color);
+  padding-bottom: 0.75rem;
+  margin-bottom: 2rem;
+  color: var(--primary-darker-color);
+}
+
+.summaryText {
+  white-space: pre-wrap;
+  line-height: 1.7;
+  color: var(--text-color-body);
+  font-size: 1rem;
+}
+
+.glossaryBox {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 2px dashed #a78bfa;
+}
+
+.glossaryHeading {
+  color: #7c3aed;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.glossaryText {
+  composes: summaryText;
+}
+
+.summaryActionsContainer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 2rem;
+}
+
+.buttonDownload {
+  composes: buttonSubtle;
+  padding: 0.75rem 1.75rem;
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+}
+
+.audioActionsBox {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  background-color: #e0e7ff;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.buttonRestartAudio {
+  composes: buttonPrimary;
+  background-color: var(--secondary-ai-base-color);
+  padding: 0.75rem;
+}
+
+.buttonStopAudio {
+  composes: buttonSubtle;
+  padding: 0.75rem;
+}
+
+.aiGenerationActions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.aiActionBox {
+  text-align: center;
+}
+
+.aiActionBox button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}
+
+.buttonSecondaryAI {
+  composes: buttonPrimary;
+  background-color: var(--secondary-ai-base-color);
+}
+
+.buttonSecondaryAI:hover {
+  background-color: #7c3aed;
+}
+
+.buttonSuccess {
+  background-color: #10b981 !important;
+  color: white;
+  cursor: default;
+  box-shadow: none !important;
+}
+
+.quizCard {
+  margin-bottom: 5rem;
+}
+
+.quizQuestionBox {
+  margin-bottom: 2.5rem;
+  padding: 1.75rem;
+  background-color: #f8fafc;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+}
+
+.quizQuestionText {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.quizOptionsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.quizOptionButton {
+  composes: buttonSubtle;
+  padding: 1.25rem;
+  text-align: left;
+  background-color: white;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+  display: block;
+}
+
+.quizOptionButton:hover {
+  border-color: var(--text-color-accent);
+  background-color: #f8fafc;
+}
+
+.quizOptionButtonSelected {
+  border-color: var(--primary-base-color);
+  background-color: #e0e7ff;
+  color: var(--primary-dark-color);
+  font-weight: 500;
+}
+
+.quizResultBox {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid;
+}
+
+.quizResultBoxCorrect {
+  background-color: #d1fae5;
+  color: #065f46;
+  border-color: #34d399;
+}
+
+.quizResultBoxIncorrect {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border-color: #f87171;
+}
+
+.buttonPrimaryAction {
+  composes: buttonPrimaryLarge;
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+}
+
+.modalVisible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modalCard {
+  width: 100%;
+  max-width: 640px;
+  max-height: 90vh;
+  position: relative;
+  box-shadow: var(--shadow-modal);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+.modalCloseButton {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-color-accent);
+  padding: 0;
+  line-height: 1;
+}
+
+.modalCloseButton:hover {
+  color: var(--primary-dark-color);
+}
+
+.modalHeading {
+  text-align: center;
+  color: var(--primary-dark-color);
+  margin-bottom: 0.25rem;
+  font-size: 2rem;
+}
+
+.modalSubheading {
+  text-align: center;
+  color: var(--text-color-accent);
+  margin-bottom: 2.5rem;
+}
+
+.flashcardContainer {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+  perspective: 1500px;
+}
+
+.flashcardInner {
+  width: 100%;
+  max-width: 480px;
+  height: 300px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.flashcardFlipped {
+  transform: rotateY(180deg);
+}
+
+.flashcardFront,
+.flashcardBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.75rem;
+  text-align: center;
+  box-shadow: var(--shadow-base);
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.flashcardFront {
+  background-color: #eef2ff;
+  border: 3px solid var(--primary-base-color);
+  border-color: rgba(99, 102, 241, 0.25);
+}
+
+.flashcardFront h3 {
+  margin: 0;
+  color: #312e81;
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+
+.flashcardBack {
+  background-color: var(--primary-base-color);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flashcardBack p {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.modalNavigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  padding: 0 1.5rem;
+}
+
+.buttonNav {
+  composes: buttonSubtle;
+  padding: 0.85rem 1.25rem;
+  font-size: 1.125rem;
+}
+
+.buttonNavDisabled {
+  background-color: #e0e7ff;
+  color: #818cf8;
+  cursor: not-allowed;
+}
+
+.buttonNavEnabled {
+  background-color: var(--primary-dark-color);
+  color: white;
+}
+
+.buttonNavEnabled:hover {
+  background-color: var(--primary-darker-color);
+}
+
+.modalCounter {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: var(--primary-darker-color);
+  background-color: #e0e7ff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 9999px;
+  border: 1px solid #c7d2fe;
+}
+
+/*statistici*/
+.statsContainer {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.statBox {
+  flex: 1;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.statValue {
+  font-size: 1.25rem;
+  color: var(--primary-darker-color);
+  font-weight: 800;
+}
+
+.keywordsContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.keywordsLabel {
+  font-weight: bold;
+  color: var(--text-color-body);
+}
+
+.keywordsList {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.keywordBadge {
+  background-color: #e0e7ff;
+  color: #4338ca;
+  padding: 0.4rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1px solid #c7d2fe;
+}
