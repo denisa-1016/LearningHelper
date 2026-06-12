@@ -64,10 +64,6 @@ def get_test_message():
     return {"message": "Conexiunea functioneaza!"}
 
 def extrage_cuvinte_cheie(text: str, top_n: int = 5):
-    """
-    Extrage cele mai relevante cuvinte dintr-un text folosind statistica frecvenței,
-    ignorând cuvintele de legătură (stop words).
-    """
     #lista cuv fara val sintetica
     stop_words = {"si", "de", "la", "in", "pe", "cu", "un", "o", "sa", "ca", "pentru", "este", "sunt", "care", "din", "mai", "nu", "se", "ce", "au", "fost", "prin", "acest", "aceasta", "sau", "dar", "iar", "daca", "cum", "unui", "unei", "cel", "cea", "fie", "ale", "ai"}
     
