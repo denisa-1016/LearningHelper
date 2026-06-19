@@ -9,13 +9,13 @@ longSummary = (
 )
 
 shortSummary = (
-    "Esti un asistent inteligent (Sinteza Rapida Skill). Task-ul tau este sa faci un rezumat clar si concis al acestui text. "
+    "Esti un asistent inteligent. Task-ul tau este sa faci un rezumat clar si concis al acestui text. "
     "Extrage doar ideile principale. Nu inventa informatii care nu exista in textul original. "
     "Daca textul este foarte scurt, rezumatul trebuie sa fie proportional de scurt si la obiect."
 )
 
 glossarySkill = (
-    "Esti un expert in terminologie (Glosar Skill). Analizeaza textul primit si extrage cele mai importante concepte. "
+    "Esti un expert in terminologie. Analizeaza textul primit si extrage cele mai importante concepte. "
     "Returneaza rezultatul sub forma de dictionar: Termen - Definitie."
     "Numeroteaza fiecare element din glosar."
 )

@@ -334,6 +334,33 @@ export default function Home() {
         setCurrentView("dashboard");
     };
 
+    const handleLogin = async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch("http://45.80.149.49:8000/api/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    email: email,
+                    password: password
+                }),
+            });
+            if (response.ok) {
+                const userData = await response.json();
+                setCurrentView("dashboard");
+
+            } else {
+                alert("Email sau parolă incorectă!");
+            }
+        } catch (error) {
+            console.error("Eroare la conectare:", error);
+            alert("Nu s-a putut conecta la server. Verifică dacă backend-ul rulează.");
+        }
+    };
+
     const handleLogout = () => {
         setCurrentView("login");
         resetStates();
@@ -415,10 +442,10 @@ export default function Home() {
                     <h1 className={styles.headingPrimary}>Autentificare</h1>
                     <p className={styles.headingAccent}>Bine ai revenit pe platforma!</p>
 
-                    <form onSubmit={handleAuthSubmit} className={styles.authForm}>
+                    <form onSubmit={handleLogin} className={styles.authForm}>
                         <input type="email" placeholder="Email" required className={styles.inputField} />
                         <input type="password" placeholder="Parolă" required className={styles.inputField} />
-                        <button type="submit" className={styles.buttonPrimary}>Intră în cont</button>
+                        <button type="submit" className={styles.buttonPrimary}>Intra in cont</button>
                     </form>
 
                     <p className={styles.authSwitchPrompt}>
