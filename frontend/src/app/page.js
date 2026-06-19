@@ -357,7 +357,7 @@ export default function Home() {
             }
         } catch (error) {
             console.error("Eroare la conectare:", error);
-            alert("Nu s-a putut conecta la server. Verifică dacă backend-ul rulează.");
+            alert("Nu s-a putut conecta la server.");
         }
     };
 
