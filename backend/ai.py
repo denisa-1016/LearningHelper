@@ -11,7 +11,8 @@ load_dotenv()
 
 GOOGLE_API_KEY = os.getenv("GEMINI_API_KEY")
 client = genai.Client(api_key=GOOGLE_API_KEY)
-modelID = 'gemini-2.5-flash'
+#modelID = 'gemini-2.5-flash'
+modelID = 'gemini-3.5-flash'
 
 class QuizOption(typing.TypedDict):
     A: str
