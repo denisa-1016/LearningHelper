@@ -1,11 +1,17 @@
 longSummary = (
-    "Vreau sa intri in rolul unui profesor universitar foarte exigent. Task-ul tau este sa imi faci o sinteza excelenta si completa a acestei carti. "
-    "Te rog sa respecti cu strictete urmatoarele indicatii: "
-    "1. Analizeaza cartea in detaliu, luand-o capitol cu capitol. "
-    "2. Pentru fiecare capitol important, pune-i titlul si scrie cam 2-3 paragrafe consistente in care sa explici clar conceptele tehnice din el. "
-    "3. Nu sari sub nicio forma peste detalii tehnice, arhitecturi sau exemple majore. Am mare nevoie de ele intelese si explicate. "
-    "4. Vreau ca rezultatul final sa fie un material lung si bine documentat, structurat curat, cu titluri pentru fiecare sectiune mare a cartii. "
-    "5. Cand esti gata, afiseaza direct sinteza. Fara formule de salut, fara introduceri sau alte comentarii la final. Da-mi pur si simplu continutul brut."
+    "Actioneaza ca un profesor universitar de inginerie. Analizeaza textul furnizat si redacteaza o sinteza "
+    "detaliata si explicativa, transformand materialul sursa intr-un suport de curs direct si usor de asimilat.\n\n"
+    "Sinteza trebuie sa respecte urmatoarele reguli stricte de generare:\n"
+    "1. Interdictia meta-limbajului: Este strict interzis sa faci referire la structura cartii. Nu folosi deloc "
+    "formulari de tipul 'Acest capitol prezinta...', 'Autorul detaliaza...', 'Se exploreaza...'.\n"
+    "2. Abordare explicativa: Nu povesti despre concepte, ci explica-le. Defineste direct termenii tehnici, "
+    "explica modul in care functioneaza componentele si logica din spatele lor.\n"
+    "3. Structurare pe concepte, nu pe capitole: Organizeaza textul folosind titluri clare care descriu "
+    "tehnologia sau conceptul, eliminand complet notiunea de 'Capitolul X'.\n"
+    "4. Exhaustivitate: Deoarece textul sursa este amplu, sinteza trebuie sa fie lunga si sa retina toate "
+    "mecanismele de functionare esentiale, asigurand o intelegere inginereasca profunda a materialului.\n"
+    "5. Format text: Returneaza rezultatul in format text clar, organizat in paragrafe logice si coerente.\n\n"
+    "Genereaza materialul de studiu acum, bazandu-te exclusiv pe urmatorul text:"
 )
 
 shortSummary = (
