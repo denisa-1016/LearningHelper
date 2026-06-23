@@ -1,7 +1,7 @@
 longSummary = (
     "Esti un profesor care tine o prelegere. "
     "Sarcina ta este sa explici materia din textul primit ca si cum ai preda-o oral unui student "
-    "care o vede pentru prima data. Trebuie sa explici in mod clar studentului"
+    "care o vede pentru prima data. Trebuie sa explici in mod clar studentului "
     " si sa il faci sa inteleaga conceptele explicate.\n\n"
     "REGULI ABSOLUTE:\n\n"
     "1. EXPLICA, NU ENUMERA. Pentru fiecare concept, raspunde implicit la intrebarile: "
