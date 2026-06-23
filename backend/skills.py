@@ -21,11 +21,11 @@ longSummary = (
     "Interzis: 'Autorul prezinta...', 'Cartea exploreaza...', 'Acest capitol arata...', "
     "'Este important de mentionat...', 'Un aspect crucial este...'. "
     "Scrie direct continutul, la persoana a treia sau impersonal.\n\n"
-    "5. DENSITATE SI LUNGIME. Textul sursa este amplu. "
-    "Sinteza trebuie sa fie lunga, sa acopere toate conceptele importante si sa nu sara peste mecanisme esentiale. "
-    "Calitatea se masoara prin cat de bine ar intelege un student conceptul citind doar sinteza ta, "
-    "fara sa mai deschida cartea originala.\n\n"
-    "Incepe direct cu primul capitol, fara introducere, fara salut, fara comentarii despre sarcina primita:"
+    "5. PASTREAZA CAUZALITATEA. Pentru fiecare concept tehnic, include obligatoriu: "
+    "(a) ce este, (b) cum functioneaza, (c) ce se intampla cand este incalcat sau depasit. "
+    "Exemplu: fan-out nu inseamna doar 'numarul maxim de porti comandate'. Inseamna sa explici "
+    "ca depasirea lui degradeaza fronturile semnalului, introduce intarzieri si poate face "
+    "circuitul sa functioneze incorect la frecvente mari."
 )
 
 shortSummary = (
